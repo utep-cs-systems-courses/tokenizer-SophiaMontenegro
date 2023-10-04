@@ -1,6 +1,6 @@
 /*Building a Simple UI */
-#include "tokenizer.c"
-#include "history.c"
+#include "tokenizer.h"
+#include "history.h"
 #include <stdio.h>
 int isEqual(const char *str1, const char *str2){
   while(*str1 != '\0' && *str2 != '\0'){
@@ -21,10 +21,10 @@ int main(){
     
     char input[100];
     //Read the input
-    scanf("%d", input);
+    scanf("%s", input);
 
     //Check if it should exit the program
-    if(isEqual(input, "QUIT/n")==1){
+    if(isEqual(input, "QUIT")==1){
 	printf("Exiting\n");
 	break;
       }
