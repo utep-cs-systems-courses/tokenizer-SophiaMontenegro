@@ -3,8 +3,9 @@
 #include "history.h"
 
 List* init_history(){
-  List* list = (List*)malloc(sizeof(List));
-  list->root = NULL;
+  //List* list = (List*)malloc(sizeof(List));
+  List *list;
+  //list->root = NULL;
   return list;
 }
 
@@ -21,7 +22,8 @@ void add_history(List *list, char *str){
   //Traverses through the list to get to the end
   else{
     Item *current = list->root;
-    while(current->next != NULL){
+    while(current != NULL){
+      // current->id+=1;
       current = current->next;
     }
     //Sets new history item
